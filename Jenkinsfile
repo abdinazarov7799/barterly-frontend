@@ -10,6 +10,8 @@ pipeline {
         stage('Install Dependencies and run') {
             steps {
                 // Install project dependencies
+                sh '/services/barterly/frontend'
+                sh 'git pull'
                 sh 'npm install'
                 sh 'npm run dev'
             }
