@@ -1,36 +1,43 @@
 pipeline {
     agent any
-        //stage('Checkout') {
-        //    steps {
-                // Checkout code from the repository
-        //        git 'https://github.com/your-username/your-vite-project.git'
-        //    }
-        //}
 
-        stage('Install Dependencies and run') {
+    stages {
+        stage('Checkout') {
             steps {
-                // Install project dependencies
-                sh '/services/barterly/frontend'
-                sh 'git pull'
-                sh 'npm install'
-                sh 'npm run dev'
+                // Git repository-dan kodni olish
+                git 'https://github.com/abdinazarov7799/barterly-frontend.git'
             }
         }
 
+        stage('Install Dependencies') {
+            steps {
+                // Zaruriy paketlarni o'rnatish
+                sh 'npm install'
+            }
+        }
+
+        stage('Run Development Server') {
+            steps {
+                // Loyihani ishga tushirish
+                sh 'npm run dev'
+            }
+        }
+    }
+
     post {
         always {
-            // Clean workspace after the build
+            // Builddan so'ng ish joyini tozalash
             cleanWs()
         }
 
         success {
-            // Notify on success (e.g., send an email or a Slack message)
-            echo ' succeeded!'
+            // Yaxshi ish holati uchun xabar yuborish
+            echo 'Build succeeded!'
         }
 
         failure {
-            // Notify on failure (e.g., send an email or a Slack message)
-            echo ' failed!'
+            // Xato yuzaga kelganida xabar yuborish
+            echo 'Build failed!'
         }
     }
 }
