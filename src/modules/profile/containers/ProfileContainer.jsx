@@ -2,19 +2,20 @@ import React from 'react';
 import TopBar from "../../home/components/TopBar.jsx";
 import UserProfile from "../components/UserProfile.jsx";
 import UserBarters from "../components/UserBarters.jsx";
+import Container from "../../../components/Container.jsx";
 
 const ProfileContainer = () => {
     return (
         <div className="space-y-5">
-            <section>
+            <Container>
                 <TopBar />
-            </section>
-            <section>
+            </Container>
+            <Container>
                 <UserProfile />
-            </section>
-            <section>
+            </Container>
+            <Container>
                 <UserBarters />
-            </section>
+            </Container>
         </div>
     );
 };

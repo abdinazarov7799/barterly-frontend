@@ -1,43 +1,35 @@
 pipeline {
     agent any
-
-    stages {
         stage('Checkout') {
-            steps {
-                // Git repository-dan kodni olish
-                git 'https://github.com/abdinazarov7799/barterly-frontend.git'
-            }
+           steps {
+               // Checkout code from the repository
+               git 'https://github.com/abdinazarov7799/barterly-frontend.git'
+           }
         }
 
-        stage('Install Dependencies') {
+        stage('Install Dependencies and run') {
             steps {
-                // Zaruriy paketlarni o'rnatish
+                // Install project dependencies
+                sh 'git pull'
                 sh 'npm install'
-            }
-        }
-
-        stage('Run Development Server') {
-            steps {
-                // Loyihani ishga tushirish
                 sh 'npm run dev'
             }
         }
-    }
 
     post {
         always {
-            // Builddan so'ng ish joyini tozalash
+            // Clean workspace after the build
             cleanWs()
         }
 
         success {
-            // Yaxshi ish holati uchun xabar yuborish
-            echo 'Build succeeded!'
+            // Notify on success (e.g., send an email or a Slack message)
+            echo ' succeeded!'
         }
 
         failure {
-            // Xato yuzaga kelganida xabar yuborish
-            echo 'Build failed!'
+            // Notify on failure (e.g., send an email or a Slack message)
+            echo ' failed!'
         }
     }
 }
