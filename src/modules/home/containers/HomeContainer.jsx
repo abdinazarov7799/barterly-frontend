@@ -4,26 +4,27 @@ import Carousel from "../../../components/Carousel.jsx";
 import Categories from "../components/Categories.jsx";
 import PremiumItems from "../components/PremiumItems.jsx";
 import RecommendedItems from "../components/RecommendedItems.jsx";
+import Container from "../../../components/Container.jsx";
 
 const HomeContainer = () => {
 
     return (
         <div className="space-y-5">
-            <section>
+            <Container>
                 <TopBar />
-            </section>
-            <section>
+            </Container>
+            <Container>
                 <Carousel />
-            </section>
-            <section>
+            </Container>
+            <Container>
                 <Categories />
-            </section>
-            <section>
+            </Container>
+            <Container>
                 <PremiumItems />
-            </section>
-            <section>
+            </Container>
+            <Container>
                 <RecommendedItems />
-            </section>
+            </Container>
         </div>
     )
 };
