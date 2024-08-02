@@ -6,10 +6,11 @@ import profileIcon from '../../assets/icons/profile.svg';
 import barterIcon from '../../assets/icons/barter.svg';
 import favoriteIcon from '../../assets/icons/favorite.svg';
 import menuIcon from '../../assets/icons/burger.svg';
+import closeIcon from '../../assets/icons/close.svg';
 import plusIcon from '../../assets/icons/plus.svg';
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import HeaderCatalog from "./HeaderCatalog.jsx";
+import HeaderCatalog from "./components/HeaderCatalog.jsx";
 import Container from "../../components/Container.jsx";
 
 const Header = () => {
@@ -109,7 +110,13 @@ const Header = () => {
                             <Link to='/'><img src={logo} alt="Logo"/></Link>
                             <button onClick={toggleCatalog}
                                     className="bg-gray p-3 rounded-md flex items-center font-extrabold text-[12px]">
-                                <img src={menuIcon} alt="menu-icon" className="mr-2"/>
+                                <img
+                                    src={catalogOpen ? closeIcon : menuIcon}
+                                    alt="menu-icon"
+                                    className="mr-2"
+                                    width={catalogOpen ? 10 : 18}
+                                    height={catalogOpen ? 10 : 12}
+                                />
                                 <span>Каталог</span>
                             </button>
                         </div>
