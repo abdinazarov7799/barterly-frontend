@@ -111,7 +111,7 @@ const Header = () => {
                             <button onClick={toggleCatalog}
                                     className="bg-gray p-3 rounded-md flex items-center font-extrabold text-[12px]">
                                 <img
-                                    src={catalogOpen ? closeIcon : menuIcon}
+                                    src={`${catalogOpen ? closeIcon : menuIcon}`}
                                     alt="menu-icon"
                                     className="mr-2"
                                     width={catalogOpen ? 10 : 18}

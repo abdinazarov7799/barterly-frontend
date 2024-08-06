@@ -8,6 +8,7 @@ import Layout from "../layouts/main/Layout.jsx";
 import NotFoundPage from "../components/pages/NotFoundPage.jsx";
 import HomePage from "../modules/home/pages/HomePage.jsx";
 import ProfilePage from "../modules/profile/pages/ProfilePage.jsx";
+import ItemViewPage from "../modules/item/pages/ItemViewPage.jsx";
 
 const Router = () => {
     dayjs.extend(utc)
@@ -25,6 +26,11 @@ const Router = () => {
                             path={"/profile"}
                             index
                             element={<ProfilePage />}
+                        />
+                        <Route
+                            path={"/:category/:id"}
+                            index
+                            element={<ItemViewPage />}
                         />
                         <Route path={"*"} element={<NotFoundPage />} />
                     </Route>

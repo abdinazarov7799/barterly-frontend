@@ -2,10 +2,12 @@ import React from 'react';
 import Icon1 from '../assets/icons/cardIcon1.svg'
 import Icon2 from '../assets/icons/cardIcon2.svg'
 import Icon3 from '../assets/icons/cardIcon3.svg'
+import {useNavigate} from "react-router-dom";
 
 const BarterCard = ({item}) => {
+    const navigate = useNavigate();
     return (
-        <div className="rounded-lg overflow-hidden border-2 border-gray bg-white">
+        <div className="rounded-lg overflow-hidden border-2 border-gray bg-white cursor-pointer" onClick={() => navigate(`/${item.category}/${item.id}`)}>
             <div className="h-[192px] bg-gray relative">
                 <div className="absolute flex space-x-2 right-2 top-2">
                     <img src={Icon1} alt="icon1"/>
