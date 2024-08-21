@@ -7,8 +7,9 @@ import OverlayLoader from "../components/loader/OverlayLoader";
 import Layout from "../layouts/main/Layout.jsx";
 import NotFoundPage from "../components/pages/NotFoundPage.jsx";
 import HomePage from "../modules/home/pages/HomePage.jsx";
-import ProfilePage from "../modules/profile/pages/ProfilePage.jsx";
+import UserProfilePage from "../modules/user-profile/pages/UserProfilePage.jsx";
 import ItemViewPage from "../modules/item/pages/ItemViewPage.jsx";
+import MyProfilePage from "../modules/my-profile/pages/MyProfilePage.jsx";
 
 const Router = () => {
     dayjs.extend(utc)
@@ -23,9 +24,14 @@ const Router = () => {
                             element={<HomePage />}
                         />
                         <Route
+                            path={"/user/:id"}
+                            index
+                            element={<UserProfilePage />}
+                        />
+                        <Route
                             path={"/profile"}
                             index
-                            element={<ProfilePage />}
+                            element={<MyProfilePage />}
                         />
                         <Route
                             path={"/:category/:id"}

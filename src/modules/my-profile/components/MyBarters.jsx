@@ -3,7 +3,7 @@ import sorting1Icon from '../../../assets/icons/sorting_1.svg'
 import sorting2Icon from '../../../assets/icons/sorting_2.svg'
 import BarterCard from "../../../components/BarterCard.jsx";
 
-const UserBarters = () => {
+const MyBarters = () => {
     const items = [
         {
             id: 1,
@@ -64,29 +64,12 @@ const UserBarters = () => {
             date: "12 ЯНВ",
             description: "Готов обменять Автомобиль Opel Mokka 1.8 MT, 2014 года выпуска. Автомобиль в отличном техническом состоянии, бережная эксплуатация. В ДТП не участвовал. Вложений не требует."
         },
-        {
-            id: 9,
-            title: "3-к. квартира, 104 м2, 5/12 эт., ЖК GoldenHouse",
-            category: "Недвижимость",
-            date: "27 ФЕВ",
-            description: "Готов обменять трёхкомнатную квaртиру в Ташкенте пo ул. Махтумкули в Мирзо-Улугбекском paйоне.\n" +
-                "Квартиpа 104 кв.м. бeз учётa балкoнa. B квaртире улучшeнa планирoвка."
-        },
-        {
-            id: 10,
-            title: "Автомобиль Opel Mokka 1.8 MT, 2014, 155 644 км",
-            category: "Авто-транспорт",
-            date: "12 ЯНВ",
-            description: "Готов обменять Автомобиль Opel Mokka 1.8 MT, 2014 года выпуска. Автомобиль в отличном техническом состоянии, бережная эксплуатация. В ДТП не участвовал. Вложений не требует."
-        },
     ]
 
     return (
         <div>
-            <div className='border-b-2 border-gray pb-3'>
-                <p className='font-bold text-[16px]'>Бартеры Dilmurod1227</p>
-            </div>
-            <div className='flex items-center justify-between font-black text-[10px] mt-3'>
+            <div className='flex items-center justify-between font-bold text-[10px] mt-3'>
+                <p>Бартеры</p>
                 <p>Доступно 12 предложений</p>
                 <div className='flex items-center space-x-1'>
                     <button className='flex items-center bg-gray px-3 py-2 rounded-full mr-4'>
@@ -101,7 +84,7 @@ const UserBarters = () => {
                     <button><img src={sorting2Icon} alt="sorting-2"/></button>
                 </div>
             </div>
-            <div className='grid grid-cols-5 gap-5 py-3'>
+            <div className='grid grid-cols-4 gap-5 py-3'>
                 {
                     items.map((item, index) => (
                         <BarterCard item={item} key={index}/>
@@ -117,4 +100,4 @@ const UserBarters = () => {
     );
 };
 
-export default UserBarters;
+export default MyBarters;

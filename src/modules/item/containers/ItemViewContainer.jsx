@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from "../../../components/Container.jsx";
 import TopBar from "../../home/components/TopBar.jsx";
-import ItemInfo from "../components/ItemInfo.jsx";
+import ItemInfo from "./ItemInfo.jsx";
 
 const ItemViewContainer = ({category,id}) => {
 
