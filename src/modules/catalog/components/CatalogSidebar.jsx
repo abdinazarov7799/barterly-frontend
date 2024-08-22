@@ -1,5 +1,10 @@
 import React, {useState} from 'react';
 import {get} from "lodash";
+import District from "./accordion-items/District.jsx";
+import Filter from "./accordion-items/Filter.jsx";
+import HousingType from "./accordion-items/HousingType.jsx";
+import HouseType from "./accordion-items/HouseType.jsx";
+import City from "./accordion-items/City.jsx";
 
 const AccordionItem = ({ title, children, isOpen, onClick }) => (
     <div>
@@ -32,27 +37,27 @@ const CatalogSidebar = () => {
         {
             id: 1,
             title: "Город",
-            children: <>Bo'ladi zerikmang</>,
+            children: <City />,
         },
         {
             id: 2,
             title: "Район",
-            children: <></>,
+            children: <District />,
         },
         {
             id: 3,
             title: "Фильтры",
-            children: <></>,
+            children: <Filter />,
         },
         {
             id: 4,
             title: "Тип жилья",
-            children: <></>,
+            children: <HousingType />,
         },
         {
             id: 5,
             title: "Тип дома",
-            children: <></>,
+            children: <HouseType />,
         },
         {
             id: 6,
