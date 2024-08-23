@@ -155,11 +155,12 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="flex items-center space-x-4">
-                            <button
-                                className="flex items-center justify-between bg-gray p-3 font-extrabold text-[12px] rounded-md ml-5">
+                            <Link
+                                to="/add-item"
+                                className="flex items-center bg-gray p-3 font-extrabold text-[12px] rounded-md ml-5">
                                 <img src={plusIcon} alt="plus"/>
                                 <span className='ml-2'>Добавить бартер</span>
-                            </button>
+                            </Link>
                             <div className='flex items-center space-x-3 font-extrabold text-[10px]'>
                                 <Link to='/profile' className="flex flex-col items-center">
                                     <div className="bg-gray py-2 px-3 rounded-md">

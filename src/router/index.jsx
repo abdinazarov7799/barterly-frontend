@@ -11,6 +11,7 @@ import UserProfilePage from "../modules/user-profile/pages/UserProfilePage.jsx";
 import ItemViewPage from "../modules/item/pages/ItemViewPage.jsx";
 import MyProfilePage from "../modules/my-profile/pages/MyProfilePage.jsx";
 import CatalogPage from "../modules/catalog/pages/CatalogPage.jsx";
+import AddItemPage from "../modules/add-item/pages/AddItemPage.jsx";
 
 const Router = () => {
     dayjs.extend(utc)
@@ -43,6 +44,11 @@ const Router = () => {
                             path={"/:category/:id"}
                             index
                             element={<ItemViewPage />}
+                        />
+                        <Route
+                            path={"/add-item"}
+                            index
+                            element={<AddItemPage />}
                         />
                         <Route path={"*"} element={<NotFoundPage />} />
                     </Route>
