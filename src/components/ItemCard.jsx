@@ -8,7 +8,7 @@ import {useNavigate} from "react-router-dom";
 const ItemCard = ({item}) => {
     const navigate = useNavigate();
     return (
-        <div className="rounded-lg overflow-hidden border-2 border-gray bg-white cursor-pointer" onClick={() => navigate(`/${item.category}/${item.id}`)}>
+        <div className="rounded-[8px] overflow-hidden border-2 border-gray bg-white cursor-pointer" onClick={() => navigate(`/${item.category}/${item.id}`)}>
             <div className="h-[192px] bg-gray relative">
                 <div className="absolute flex space-x-2 right-2 top-2">
                     <img src={Icon1} alt="icon1"/>
