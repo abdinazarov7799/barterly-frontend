@@ -1,6 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import leftIcon from '../assets/icons1/left-arrow.svg';
-import rightIcon from '../assets/icons1/right-arrow.svg';
 
 const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,11 +34,19 @@ const Carousel = () => {
                     ))}
                 </div>
             </div>
-            <button onClick={goToPrevSlide} className="absolute top-1/2 -left-5 transform -translate-y-1/2 py-[6px] px-[10px] bg-white border-gray border-[2px] rounded-lg">
-                <img src={leftIcon} alt="slide-left" width={12} height={6} />
+            <button onClick={goToPrevSlide}
+                    className="absolute top-1/2 -left-5 transform -translate-y-1/2 py-[12px] px-[7px] bg-white border-gray border-[2px] rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10" fill="none">
+                    <path d="M5 9L1 5M1 5L5 1M1 5L19 5" stroke="#D7D6D6" strokeWidth="2" strokeLinecap="round"
+                          strokeLinejoin="round"/>
+                </svg>
             </button>
-            <button onClick={goToNextSlide} className="absolute top-1/2 -right-5 transform -translate-y-1/2 py-[6px] px-[10px] bg-white border-gray border-[2px] rounded-lg">
-                <img src={rightIcon} alt="slide-right" width={12} height={6} />
+            <button onClick={goToNextSlide}
+                    className="absolute top-1/2 -right-5 transform -translate-y-1/2 py-[12px] px-[7px] bg-white border-gray border-[2px] rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10" fill="none">
+                    <path d="M15 1L19 5M19 5L15 9M19 5L1 5" stroke="#D7D6D6" strokeWidth="2" strokeLinecap="round"
+                          strokeLinejoin="round"/>
+                </svg>
             </button>
             <div className="flex justify-center mt-3">
                 {slides.map((_, index) => (

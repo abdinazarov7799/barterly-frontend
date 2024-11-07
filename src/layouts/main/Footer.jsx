@@ -10,7 +10,7 @@ import Container from "../../components/Container.jsx";
 const Footer = () => {
     const { t } = useTranslation();
     return (
-        <footer className="w-full bg-gray-light py-5">
+        <footer className="w-full bg-[#F5F5F5] py-5">
             <Container>
                 <div className="flex justify-between items-start font-black text-text-gray text-[10px]">
                     <img src={footerLogo} width={147} height={30} alt="footer logo"/>

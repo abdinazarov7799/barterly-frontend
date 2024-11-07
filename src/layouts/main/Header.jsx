@@ -95,7 +95,7 @@ const Header = () => {
                     <div className="flex items-center">
                         <Location width={16} height={20} color={"#A5A4A3"}/>
                         <p className="underline ml-[16px] mr-[11px]">Выберите город или область</p>
-                        <ArrowDown viewBox="0 0 8 5" width={8} height={5} color={"#A5A4A3"}/>
+                        <ArrowDown width={8} height={5} color={"#A5A4A3"}/>
                     </div>
                     <ul className="w-8/12 flex items-center justify-end space-x-10">
                         <li><Link to="/">{t("Бизнес - аккаунт")}</Link></li>
@@ -105,7 +105,7 @@ const Header = () => {
                     </ul>
                     <div className="flex items-center space-x-[9px]">
                         <p>UZB</p>
-                        <ArrowDown viewBox="0 0 8 5" width={8} height={5} color={"#A5A4A3"}/>
+                        <ArrowDown width={8} height={5} color={"#A5A4A3"}/>
                     </div>
                 </div>
             </Container>
@@ -122,7 +122,7 @@ const Header = () => {
                                 <span className='ml-[12px]'>Каталог</span>
                             </button>
                             <button className="bg-gray p-3 rounded-md flex items-center font-extrabold text-[12px]">
-                                <AddPlusFile width={10.5} height={14} className="mr-2"/>
+                                <AddPlusFile width={10.5} height={14} className="mr-2" />
                                 <span>Добавить айтем</span>
                             </button>
                         </div>
