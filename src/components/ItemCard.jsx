@@ -1,9 +1,10 @@
 import React from 'react';
-import Icon1 from '../assets/icons/cardIcon1.svg'
-import Icon2 from '../assets/icons/cardIcon2.svg'
-import Icon3 from '../assets/icons/cardIcon3.svg'
-import IconBarter from '../assets/icons/icon_Barters.svg'
+import Icon1 from '../assets/icons1/cardIcon1.svg'
+import Icon2 from '../assets/icons1/cardIcon2.svg'
+import Icon3 from '../assets/icons1/cardIcon3.svg'
+import IconBarter from '../assets/icons1/icon_Barters.svg'
 import {useNavigate} from "react-router-dom";
+import {VerifyNew} from "../assets/barterly-icons/index.js";
 
 const ItemCard = ({item}) => {
     const navigate = useNavigate();
@@ -27,10 +28,7 @@ const ItemCard = ({item}) => {
                     </div>
                     <div className="flex items-center space-x-2">
                         <div className="bg-gray text-white rounded-full px-2 text-sm">pro</div>
-                        <div className='flex items-center space-x-2'>
-                            <img src={IconBarter} alt="icon-barter" width={10} height={10}/>
-                            <span>{item.count}</span>
-                        </div>
+                        <VerifyNew />
                     </div>
                 </div>
                 <div className="flex justify-between items-center font-black text-[10px] p-3">

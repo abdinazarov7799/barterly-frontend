@@ -2,7 +2,7 @@ import React from 'react';
 import AccordionItemContainer from "./AccordionItemContainer.jsx";
 import FilterCheckbox from "../FilterCheckbox.jsx";
 import {get} from "lodash";
-import InputSearch from "../../../../components/InputSearch.jsx";
+import InputSearch from "../../../../components/ui/InputSearch.jsx";
 
 const City = () => {
     const items = [

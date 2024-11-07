@@ -1,6 +1,6 @@
 import React from 'react';
-import sorting1Icon from '../../../assets/icons/sorting_1.svg'
-import sorting2Icon from '../../../assets/icons/sorting_2.svg'
+import sorting1Icon from '../../../assets/icons1/sorting_1.svg'
+import sorting2Icon from '../../../assets/icons1/sorting_2.svg'
 import BarterCard from "../../../components/BarterCard.jsx";
 
 const MyBarters = () => {

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import leftIcon from '../assets/icons/left-arrow.svg';
-import rightIcon from '../assets/icons/right-arrow.svg';
+import leftIcon from '../assets/icons1/left-arrow.svg';
+import rightIcon from '../assets/icons1/right-arrow.svg';
 
 const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,10 +36,10 @@ const Carousel = () => {
                     ))}
                 </div>
             </div>
-            <button onClick={goToPrevSlide} className="absolute top-1/2 -left-5 transform -translate-y-1/2 bg-white rounded-full py-2 px-3 shadow-lg">
+            <button onClick={goToPrevSlide} className="absolute top-1/2 -left-5 transform -translate-y-1/2 py-[6px] px-[10px] bg-white border-gray border-[2px] rounded-lg">
                 <img src={leftIcon} alt="slide-left" width={12} height={6} />
             </button>
-            <button onClick={goToNextSlide} className="absolute top-1/2 -right-5 transform -translate-y-1/2 bg-white rounded-full py-2 px-3 shadow-lg">
+            <button onClick={goToNextSlide} className="absolute top-1/2 -right-5 transform -translate-y-1/2 py-[6px] px-[10px] bg-white border-gray border-[2px] rounded-lg">
                 <img src={rightIcon} alt="slide-right" width={12} height={6} />
             </button>
             <div className="flex justify-center mt-3">

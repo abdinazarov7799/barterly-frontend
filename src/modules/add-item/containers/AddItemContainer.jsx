@@ -3,7 +3,7 @@ import TopBar from "../../home/components/TopBar.jsx";
 import Container from "../../../components/Container.jsx";
 import PreviewItem from "../../my-profile/components/PreviewItem.jsx";
 import ItemCharacteristics from "../components/ItemCharacteristics.jsx";
-import {Select} from "../../../components/Select.jsx";
+import {Select} from "../../../components/ui/Select.jsx";
 import ItemInfo from "../components/ItemInfo.jsx";
 
 const AddItemContainer = () => {

@@ -87,10 +87,10 @@ const PremiumItems = () => {
 
     return (
         <div className='pt-4'>
-            <div className='flex justify-center'>
+            <div className='flex justify-center pb-[16px] border-gray border-b-[1.5px] mb-[24px]'>
                 <p className='font-extrabold text-[18px]'>Премиум объявления</p>
             </div>
-            <div className='grid grid-cols-5 gap-5 py-3'>
+            <div className='grid grid-cols-5 gap-5 mb-[32px]'>
                 {
                     items.map((item,index) => (
                         <ItemCard item={item} key={index} />

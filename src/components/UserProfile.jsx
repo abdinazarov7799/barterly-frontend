@@ -1,10 +1,10 @@
 import React from 'react';
-import barterIcon from "../assets/icons/icon_Barters.svg";
-import predlojeniyaIcon from "../assets/icons/kub.svg";
-import moreIcon from "../assets/icons/more.svg";
-import seeButton from "../assets/icons/button_9_24_see.svg";
-import addButton from "../assets/icons/button_9_24_add.svg";
-import authorizedButton from "../assets/icons/button_9_24_authorized.svg";
+import barterIcon from "../assets/icons1/icon_Barters.svg";
+import predlojeniyaIcon from "../assets/icons1/kub.svg";
+import moreIcon from "../assets/icons1/more.svg";
+import seeButton from "../assets/icons1/button_9_24_see.svg";
+import addButton from "../assets/icons1/button_9_24_add.svg";
+import authorizedButton from "../assets/icons1/button_9_24_authorized.svg";
 import {useNavigate} from "react-router-dom";
 
 const UserProfile = () => {

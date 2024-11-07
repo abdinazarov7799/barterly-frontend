@@ -1,5 +1,5 @@
 import React from 'react';
-import {Select} from "../../../components/Select.jsx";
+import {Select} from "../../../components/ui/Select.jsx";
 
 const ItemCharacteristics = () => {
     return (

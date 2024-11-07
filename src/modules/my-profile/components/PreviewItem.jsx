@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon1 from "../../../assets/icons/cardIcon1.svg";
-import Icon3 from "../../../assets/icons/cardIcon3.svg";
+import Icon1 from "../../../assets/icons1/cardIcon1.svg";
+import Icon3 from "../../../assets/icons1/cardIcon3.svg";
 
 const PreviewItem = () => {
     return (
