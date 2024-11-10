@@ -99,7 +99,7 @@ const Header = () => {
                     </div>
                     <ul className="w-8/12 flex items-center justify-end space-x-10">
                         <li><Link to="/">{t("Бизнес - аккаунт")}</Link></li>
-                        <li><Link to="/">{t("О сервисе")}</Link></li>
+                        <li><Link to="/about-us">{t("О сервисе")}</Link></li>
                         <li><Link to="/">{t("Как пользоваться?")}</Link></li>
                         <li><Link to="/">{t("Помощь")}</Link></li>
                     </ul>

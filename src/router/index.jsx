@@ -12,6 +12,7 @@ import ItemViewPage from "../modules/item/pages/ItemViewPage.jsx";
 import MyProfilePage from "../modules/my-profile/pages/MyProfilePage.jsx";
 import CatalogPage from "../modules/catalog/pages/CatalogPage.jsx";
 import AddItemPage from "../modules/add-item/pages/AddItemPage.jsx";
+import AboutUsPage from "../modules/about-us/pages/AboutUsPage.jsx";
 
 const Router = () => {
     dayjs.extend(utc)
@@ -20,36 +21,13 @@ const Router = () => {
             <Suspense fallback={<OverlayLoader />}>
                 <Routes>
                     <Route path={"/"} element={<Layout />}>
-                        <Route
-                            path={"/"}
-                            index
-                            element={<HomePage />}
-                        />
-                        <Route
-                            path={"/user/:id"}
-                            index
-                            element={<UserProfilePage />}
-                        />
-                        <Route
-                            path={"/profile"}
-                            index
-                            element={<MyProfilePage />}
-                        />
-                        <Route
-                            path={"/:catalog"}
-                            index
-                            element={<CatalogPage />}
-                        />
-                        <Route
-                            path={"/:category/:id"}
-                            index
-                            element={<ItemViewPage />}
-                        />
-                        <Route
-                            path={"/add-item"}
-                            index
-                            element={<AddItemPage />}
-                        />
+                        <Route path={"/"} index element={<HomePage />}/>
+                        <Route path={"/user/:id"} element={<UserProfilePage />}/>
+                        <Route path={"/profile"} element={<MyProfilePage />}/>
+                        <Route path={"/:catalog"} element={<CatalogPage />}/>
+                        <Route path={"/:category/:id"} element={<ItemViewPage />}/>
+                        <Route path={"/add-item"} element={<AddItemPage />}/>
+                        <Route path={"/about-us"} element={<AboutUsPage />}/>
                         <Route path={"*"} element={<NotFoundPage />} />
                     </Route>
                 </Routes>
